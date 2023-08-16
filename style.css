@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css?family=Quicksand&display=swap');
+
+body {
+  background-color: #3c4043;
+  color: #a8a8a8;
+  font-family: "Quicksand", 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 3rem;
+  font-weight: 500;
+}
+
+.content * {
+  margin-top: -1rem;
+}
+
+.content {
+  background-color: #202124;
+  border-radius: 10px;
+  padding: 5% 25%;
+  padding-left: 5%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+}
+
+h1 {
+  font-size: 8rem;
+  font-weight: 700;
+  text-decoration: underline 4px;
+  margin-bottom: 4rem;
+}
+
+.links {
+  font-size: 2rem;
+}
+
+.links * {
+  padding-right: .25rem;
+}
+
+.fa-youtube {
+  color: #9d0000;
+}
+
+.fa-instagram {
+  background: radial-gradient(circle at 30% 107%, #c3bc75 0%, #bfb871 5%, #bd4237 45%,#8c1867 60%,#193996 90%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.fa-twitter {
+  color: #1670a8;
+}
+
+.fa-github {
+  color: #bcbcbc;
+}
+
+.fa-discord {
+  color: #4f5f98;
+}
+
+/* Small and medium devices (portrait tablets, landscape tablets and large phones, 600px - 992px) */
+@media only screen and (max-width: 992px) {
+  .content {
+    height: 75%;
+    padding: 5%;
+  }
+
+  h1 {
+    font-size: 15rem;
+    text-decoration-thickness: 8px;
+  }
+
+  body {
+    font-size: 6rem;
+  }
+
+  .links {
+    font-size: 6rem;
+    position: absolute;
+    bottom: 3rem;
+  }
+}
