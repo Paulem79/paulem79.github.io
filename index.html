@@ -21,12 +21,42 @@
           </div>
         </div>
       </div>
+      <div class="container">
+        <div class="content secondary-content">
+          <h2>Launcher</h2>
+          <p>My Minecraft Launcher</p>
+          <a href="https://github.com/Paulem79/Launcher" target="_blank" class="external-btn">View on Github <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+          <img src="launcher.webp"></img>
+        </div>
+      </div>
+      <div class="container">
+        <div class="content secondary-content">
+          <h2>ALOT</h2>
+          <p>A lot of things, in a Spigot plugin</p>
+          <a href="https://github.com/Paulem79/ALOT" target="_blank" class="external-btn">View on Github <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+        </div>
+      </div>
     </main>
 
     <script>
+      function randomBtw(min, max) { // min and max included 
+        return Math.floor(Math.random() * (max - min + 1) + min)
+      }
+
       const containers = document.querySelectorAll('.container');
 
       if(containers.length <= 1) document.body.style.overflow = "hidden";
+
+      console.log(window.screen.width)
+      
+      if(window.screen.width > 992){
+        const contents = document.querySelectorAll('.secondary-content');
+
+        for(content of contents){
+          content.style.top = randomBtw(10, 40) + "%";
+          content.style.left = randomBtw(0, 8) + "%";
+        }
+      }
       
       let click = new Audio('link.m4a');
 
