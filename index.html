@@ -6,16 +6,34 @@
     <script src="https://kit.fontawesome.com/32e2bd5693.js" crossorigin="anonymous"></script>
   </head>
   <body>
-    <div class="content">
-      <h1>Paulem</h1>
-      <p>IT Developer</p>
-      <div class="links">
-        <a href="https://www.youtube.com/@PauLem79"><i class="fa-brands fa-youtube"></i></a>
-        <a href="https://www.instagram.com/paulemyt"><i class="fa-brands fa-instagram"></i></a>
-        <a href="https://twitter.com/plem79"><i class="fa-brands fa-twitter"></i></a>
-        <a href="https://github.com/Paulem79"><i class="fa-brands fa-github"></i></a>
-        <a href="https://discord.gg/qxeE75gyzX"><i class="fa-brands fa-discord"></i></a>
+    <div class="container">
+      <div class="content">
+        <h1>Paulem</h1>
+        <p>IT Developer</p>
+        <div class="links">
+          <a href="https://www.youtube.com/@PauLem79" target="_blank" class="fa-brands fa-youtube"></a>
+          <a href="https://www.instagram.com/paulemyt" target="_blank" class="fa-brands fa-instagram"></a>
+          <a href="https://twitter.com/plem79" target="_blank" class="fa-brands fa-twitter"></a>
+          <a href="https://github.com/Paulem79" target="_blank" class="fa-brands fa-github"></a>
+          <a href="https://discord.gg/qxeE75gyzX" target="_blank" class="fa-brands fa-discord"></a>
+        </div>
       </div>
     </div>
+
+    <script>
+      const containers = document.querySelectorAll('.container');
+
+      if(containers.length <= 1) document.body.style.overflow = "hidden";
+      
+      let click = new Audio('link.m4a');
+
+      const links = document.querySelectorAll('.fa-brands');
+
+      for(link of links){
+        link.addEventListener("focus", (event) => {
+          click.play();
+        });
+      }
+    </script>
   </body>
 </html>
