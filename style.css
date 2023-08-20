@@ -27,6 +27,7 @@ body {
 .content {
   top: 25%;
   max-width: 50%;
+  max-height: 50%;
   margin: 0 auto;
   background-color: var(--content-bg);
   border-radius: 10px;
@@ -43,7 +44,7 @@ h1 {
 }
 
 .links {
-  font-size: 2rem;
+  font-size: calc(25vw/6);
 }
 
 .links * {
@@ -79,7 +80,7 @@ h1 {
   }
 
   .links {
-    font-size: 6rem;
+    font-size: 13vw;
     position: absolute;
     bottom: 3rem;
   }
