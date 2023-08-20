@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Quicksand&display=swap');
+@import url("fonts.css");
 
 :root {
   --bg: #3c4043;
@@ -10,7 +10,7 @@
 body {
   background-color: var(--bg);
   color: var(--primary);
-  font-family: "Quicksand", 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Quicksand", sans-serif;
   font-size: 5vw;
   font-weight: 500;
 }
