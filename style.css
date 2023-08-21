@@ -136,7 +136,7 @@ img {
 
   img {
     position: initial;
-    width: 100%;
+    max-width: 100%;
     height: auto;
   }
 
@@ -156,6 +156,32 @@ img {
 
   .external-btn {
     font-size: 5vw;
+  }
+}
+
+/* IPAD OS */
+@media only screen and (min-width: 800px) and (max-width: 900px) {
+  img:not(.image-viewer img) {
+    position: relative;
+    max-width: 70%;
+    height: auto;
+    left: 60%;
+    top: -20%;
+  }
+
+  .external-btn {
+    font-size: 3vw;
+  }
+}
+
+/* Icon bugfix */
+@media only screen and (max-height: 650px) {
+  .links {
+    margin-top: -3rem;
+  }
+
+  img {
+    width: 30vw;
   }
 }
 
