@@ -8,6 +8,7 @@
   </head>
   <body>
     <main role="main">
+      <div class="image-viewer"></div>
       <div class="container">
         <div class="content">
           <h1>Paulem</h1>
@@ -63,6 +64,30 @@
       for(link of links){
         link.addEventListener("focus", (event) => {
           click.play();
+        });
+      }
+
+      const images = document.querySelectorAll('img');
+      const imageviewer = document.querySelector('.image-viewer');
+
+      imageviewer.addEventListener("click", (event) => {
+        if(imageviewer.hasChildNodes()){
+          imageviewer.removeChild(imageviewer.firstChild);
+          imageviewer.style.zIndex = -1;
+          for(container of containers) {
+            container.classList.remove("blur");
+          }
+        }
+      })
+
+      for(image of images){
+        image.addEventListener("click", (event) => {
+          var copy = image.cloneNode(true);
+          imageviewer.appendChild(copy);
+          imageviewer.style.zIndex = 99;
+          for(container of containers) {
+            container.classList.add("blur");
+          }
         });
       }
     </script>
