@@ -13,11 +13,11 @@
           <h1>Paulem</h1>
           <p>IT Developer</p>
           <div class="links">
-            <a href="https://www.youtube.com/@PauLem79" target="_blank" class="fa-brands fa-youtube" aria-label="youtube"></a>
-            <a href="https://www.instagram.com/paulemyt" target="_blank" class="fa-brands fa-instagram" aria-label="instagram"></a>
-            <a href="https://twitter.com/plem79" target="_blank" class="fa-brands fa-twitter" aria-label="twitter"></a>
-            <a href="https://github.com/Paulem79" target="_blank" class="fa-brands fa-github" aria-label="github"></a>
-            <a href="https://discord.gg/qxeE75gyzX" target="_blank" class="fa-brands fa-discord" aria-label="discord"></a>
+            <a href="https://www.youtube.com/@PauLem79" target="_blank" class="fa-brands fa-youtube btn" aria-label="youtube"></a>
+            <a href="https://www.instagram.com/paulemyt" target="_blank" class="fa-brands fa-instagram btn" aria-label="instagram"></a>
+            <a href="https://twitter.com/plem79" target="_blank" class="fa-brands fa-twitter btn" aria-label="twitter"></a>
+            <a href="https://github.com/Paulem79" target="_blank" class="fa-brands fa-github btn" aria-label="github"></a>
+            <a href="https://discord.gg/qxeE75gyzX" target="_blank" class="fa-brands fa-discord btn" aria-label="discord"></a>
           </div>
         </div>
       </div>
@@ -25,7 +25,7 @@
         <div class="content secondary-content">
           <h2>Launcher</h2>
           <p>My Minecraft Launcher</p>
-          <a href="https://github.com/Paulem79/Launcher" target="_blank" class="external-btn">View on Github <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+          <a href="https://github.com/Paulem79/Launcher" target="_blank" class="external-btn btn">View on Github <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
           <img src="launcher.webp" alt="Screenshot of the launcher"></img>
         </div>
       </div>
@@ -33,7 +33,7 @@
         <div class="content secondary-content">
           <h2>ALOT</h2>
           <p>A lot of things, in a Spigot plugin</p>
-          <a href="https://github.com/Paulem79/ALOT" target="_blank" class="external-btn">View on Github <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+          <a href="https://github.com/Paulem79/ALOT" target="_blank" class="external-btn btn">View on Github <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
         </div>
       </div>
     </main>
@@ -46,8 +46,6 @@
       const containers = document.querySelectorAll('.container');
 
       if(containers.length <= 1) document.body.style.overflow = "hidden";
-
-      console.log(window.screen.width)
       
       if(window.screen.width > 992){
         const contents = document.querySelectorAll('.secondary-content');
@@ -60,7 +58,7 @@
       
       let click = new Audio('link.m4a');
 
-      const links = document.querySelectorAll('.fa-brands');
+      const links = document.querySelectorAll('.btn');
 
       for(link of links){
         link.addEventListener("focus", (event) => {
