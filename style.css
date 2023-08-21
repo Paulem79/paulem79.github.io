@@ -197,9 +197,22 @@ img {
     font-size: 12vw;
     margin-bottom: 2rem;
   }
+  
+  h2 {
+    font-size: 8vw;
+  }
+  
+  .secondary-content p {
+    font-size: 5vw;
+  }
 
   p {
     font-size: 6vw;
+  }
+
+  .external-btn {
+    font-size: 3vw;
+    padding: 5px;
   }
 }
 
@@ -208,8 +221,20 @@ img {
     font-size: 8vw;
   }
 
+  h2 {
+    font-size: 6vw;
+  }
+  
+  .secondary-content p {
+    font-size: 3vw;
+  }
+
   p {
     font-size: 4vw;
+  }
+  
+  .external-btn {
+    font-size: 2vw;
   }
 }
 
@@ -224,11 +249,23 @@ img {
     font-size: 6vw;
   }
 
+  h2 {
+    font-size: 5vw;
+  }
+  
+  .secondary-content p {
+    font-size: 3vw;
+  }
+
   p {
     font-size: 4vw;
   }
 
   .links {
     font-size: 3vw;
+  }
+  
+  .external-btn {
+    font-size: 1vw;
   }
 }
