@@ -28,7 +28,7 @@
           <h2>Launcher</h2>
           <p>My Minecraft Launcher</p>
           <a href="https://github.com/Paulem79/Launcher" target="_blank" class="external-btn btn">View on Github <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-          <img src="launcher.webp" alt="Screenshot of the launcher"></img>
+          <img src="launcher.webp" onclick="ImageViewer(this)" alt="Screenshot of the launcher"></img>
         </div>
       </div>
       <div class="container">
@@ -36,6 +36,7 @@
           <h2>ALOT</h2>
           <p>A lot of things, in a Spigot plugin</p>
           <a href="https://github.com/Paulem79/ALOT" target="_blank" class="external-btn btn">View on Github <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+          <img src="collector.webp" onclick="ImageViewer(this)" alt="Model of a custom block in the plugin"></img>
         </div>
       </div>
     </main>
@@ -53,7 +54,7 @@
         const contents = document.querySelectorAll('.secondary-content');
 
         for(content of contents){
-          content.style.top = randomBtw(0, 20) + "%";
+          content.style.top = randomBtw(0, 10) + "%";
           content.style.left = randomBtw(-8, 8) + "%";
         }
       }
@@ -73,23 +74,21 @@
 
       imageviewer.addEventListener("click", (event) => {
         if(imageviewer.hasChildNodes()){
-          imageviewer.removeChild(imageviewer.firstChild);
+          imageviewer.innerHTML = "";
           imageviewer.style.zIndex = -1;
           for(container of containers) {
             container.classList.remove("blur");
           }
         }
-      })
+      });
 
-      for(image of images){
-        image.addEventListener("click", (event) => {
-          var copy = image.cloneNode(true);
-          imageviewer.appendChild(copy);
-          imageviewer.style.zIndex = 99;
-          for(container of containers) {
-            container.classList.add("blur");
-          }
-        });
+      function ImageViewer(image){
+        var copy = image.cloneNode(true);
+        imageviewer.appendChild(copy);
+        imageviewer.style.zIndex = 99;
+        for(container of containers) {
+          container.classList.add("blur");
+        }
       }
     </script>
 
