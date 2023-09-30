@@ -69,3 +69,34 @@ img {
   border-radius: 5px;
   padding: 1vw;
 }
+
+.mac-btns {
+  display: flex;
+}
+
+.mac-btns .btn {
+  width: 1.25vw;
+  height: 1.25vw;
+  border-radius: 50%;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  margin-left: .5vw;
+  border: .25vw solid;
+}
+
+.mac-btns .btn-close {
+  background: #fd5754;
+  border-color: #db4745;
+  margin-left: 1vw;
+}
+
+.mac-btns .btn-min {
+  background: #febb40;
+  border-color: #daa02b;
+}
+
+.mac-btns .btn-max {
+  background: #34c848;
+  border-color: #2aa834;
+}

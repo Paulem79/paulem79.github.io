@@ -45,6 +45,16 @@
           await sleep(800);
         }
       }
+
+      const containers = document.querySelectorAll(".container");
+      for(const container of containers){
+        container.innerHTML = `
+      <div class="mac-btns">
+        <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank" class="btn btn-close"></a>
+        <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank" class="btn btn-min"></a>
+        <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank" class="btn btn-max"></a>
+      </div>` + container.innerHTML;
+      }
     </script>
   </body>
 </html>
