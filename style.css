@@ -31,6 +31,10 @@ h2 {
 	margin: 1vh 0;
 	font-size: 6vw;
   font-weight: 500;
+	color: transparent;
+	background: linear-gradient(135deg, #2e2cb1 15%, #f347b1);
+	background-clip: text;
+	-webkit-background-clip: text;
 }
 
 a {
