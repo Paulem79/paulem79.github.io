@@ -6,6 +6,9 @@
 :root {
 	--white: #d9d9d9;
 	--img-margin: 2.5vw;
+  --color-one: #2e2cb1;
+  --color-two: #f347b1;
+  --bg-size: 400%;
 }
 
 body {
@@ -29,22 +32,35 @@ h2 {
   font-weight: 500;
 }
 
-.bp-gradient {
-	color: transparent !important;
-	background: linear-gradient(135deg, #2e2cb1 15%, #f347b1);
-	background-clip: text;
+.bp-gradient, .bp-gradient a {
+	background-color: #3835d3;
+	background: linear-gradient(
+		90deg,
+		var(--color-one),
+		var(--color-two)
+	) 0 0 / var(--bg-size) 100%;
 	-webkit-background-clip: text;
+	-moz-background-clip: text;
+	background-clip: text;
+	background-position: var(--bg-size) 0;
+	color: transparent !important;
+	transition: background-position 1s ease;
+}
+
+.bp-gradient:hover, .bp-gradient a:hover {
+	color: transparent !important;
+	background-position: 300% 0;
 }
 
 a {
 	text-decoration: none;
-	color: #003d79;
+	color: #3835d3;
   font-weight: 400;
-	transition: color .33s;
+	transition: color .5s;
 }
 
 a:hover {
-	color: #004f9d !important;
+	color: var(--color-one) !important;
 }
 
 img {
