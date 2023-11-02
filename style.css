@@ -68,6 +68,7 @@ img {
 	max-height: 50vh;
 	border-radius: 2.5px;
 	margin: 0 var(--img-margin);
+	margin-bottom: var(--img-margin);
 }
 
 .bio {
@@ -98,7 +99,7 @@ img {
 	padding: .05vh 0;
 	position: relative;
 	width: 94vw;
-	min-height: 90vh;
+	min-height: auto;
 	left: 50%;
 	transform: translateX(-50%);
 }
