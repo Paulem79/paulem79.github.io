@@ -5,7 +5,6 @@
 
 :root {
 	--white: #d9d9d9;
-	--posStart: 2vh;
 	--img-margin: 2.5vw;
 }
 
@@ -53,7 +52,7 @@ img {
 }
 
 .bio {
-	margin-top: var(--posStart);
+	margin-top: 2vh;
 	position: relative;
 	border-radius: 16px;
 	width: 97.5vw;
@@ -86,7 +85,7 @@ img {
 }
 
 .navbar {
-	margin-top: calc(calc(var(--posStart) - 1vh) * -1);
+	top: 1vh;
 	position: fixed;
 	z-index: 99;
 	background: rgba(255, 255, 255, 0.2);
@@ -98,6 +97,7 @@ img {
 	width: max-content;
 	left: 50vw;
 	transform: translateX(-50%);
+  transition: top .5s cubic-bezier(.86,0,.07,1);
 }
 
 .navbar .navbar-item {

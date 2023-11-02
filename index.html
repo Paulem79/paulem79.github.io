@@ -18,13 +18,24 @@
         </nav>
     
         <script>
-    function navbarExpand() {
-        var x = document.getElementById("navbar");
-        if (x.className === "navbar")
-            x.className += " responsive";
-        else
-            x.className = "navbar";
-    }
+            function navbarExpand() {
+                var x = document.getElementById("navbar");
+                if (x.className === "navbar")
+                    x.className += " responsive";
+                else
+                    x.className = "navbar";
+            }
+
+            let prevScrollpos = window.pageYOffset;
+            window.onscroll = function() {
+                let currentScrollPos = window.pageYOffset;
+                if (prevScrollpos > currentScrollPos) {
+                    document.getElementById("navbar").style.top = "1vh";
+                } else {
+                    document.getElementById("navbar").style.top = "-80px";
+                }
+                prevScrollpos = currentScrollPos;
+            }
         </script>
         
         <div class="bio neumorphism">
