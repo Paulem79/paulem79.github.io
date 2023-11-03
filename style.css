@@ -153,11 +153,15 @@ img {
 	}
 
 	h2 {
-		font-size: 10vw;
+		font-size: 18vw;
 	}
 
 	.bio {
-		font-size: 10vw;
+		font-size: 15vw;
+	}
+
+	body {
+		font-size: 8vw;
 	}
 
 	.navbar .navbar-item {
