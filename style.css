@@ -63,6 +63,18 @@ a:hover {
 	color: var(--color-one) !important;
 }
 
+#things {
+	aspect-ratio: auto 683 / 353;
+}
+
+#collector {
+	aspect-ratio: auto 624 / 796;
+}
+
+#launcher {
+	aspect-ratio: auto 683 / 384;
+}
+
 img {
 	max-width: calc(100% - calc(var(--img-margin) * 2));
 	max-height: 50vh;
