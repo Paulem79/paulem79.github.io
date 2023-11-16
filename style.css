@@ -12,7 +12,7 @@
 }
 
 body {
-	background-color: var(--white);
+	background: var(--white);
 	font-family: "Onest", sans-serif;
 	margin: 0;
 	color: black;
@@ -33,29 +33,48 @@ h2 {
 }
 
 .bp-gradient, .bp-gradient a {
-	background-color: #3835d3;
-	background: linear-gradient(
-		90deg,
-		var(--color-one),
-		var(--color-two)
-	) 0 0 / var(--bg-size) 100%;
-	-webkit-background-clip: text;
-	-moz-background-clip: text;
-	background-clip: text;
-	background-position: var(--bg-size) 0;
-	color: transparent !important;
-	transition: background-position 1s ease;
+	color: var(--color-one);
+	
+	-o-transition: color 1s ease, background-position 1s ease;
+	-webkit-transition: color 1s ease, background-position 1s ease;
+	transition: color 1s ease, background-position 1s ease;
 }
 
 .bp-gradient:hover, .bp-gradient a:hover {
-	color: transparent !important;
-	background-position: 300% 0;
+	color: var(--color-two);
+}
+
+/* "Force" compatibility */
+@supports ((-ms-background-clip: text) or (-webkit-background-clip: text) or (-moz-background-clip: text) or (background-clip: text)) {
+	.bp-gradient, .bp-gradient a {
+		background: var(--color-one);
+		background: linear-gradient(
+			90deg,
+			var(--color-one),
+			var(--color-two)
+		) 0 0 / var(--bg-size) 100%;
+
+		-ms-background-clip: text;
+		-webkit-background-clip: text;
+		-moz-background-clip: text;
+		background-clip: text;
+
+		background-position: var(--bg-size) 0;
+		color: transparent !important;
+	}
+	
+	.bp-gradient:hover, .bp-gradient a:hover {
+		color: transparent !important;
+		background-position: 300% 0;
+	}
 }
 
 a {
 	text-decoration: none;
 	color: #3835d3;
   font-weight: 400;
+	-o-transition: color .5s;
+	-webkit-transition: color .5s;
 	transition: color .5s;
 }
 
@@ -90,8 +109,13 @@ img {
 	width: 97.5vw;
 	min-height: 90vh;
 	left: 50%;
-	transform: translateX(-50%);
 	padding-bottom: 3vh;
+
+	-webkit-transform: translateX(-50%);
+	-ms-transform: translateX(-50%);
+	-moz-transform: translateX(-50%);
+	-o-transform: translateX(-50%);
+	transform: translateX(-50%);
 }
 
 .bio-content {
@@ -102,6 +126,9 @@ img {
 .neumorphism {
 	background: #e0e0e0;
 	border-radius: 16px;
+
+	-webkit-box-shadow:  20px 20px 60px #bebebe,
+	-20px -20px 60px #ffffff;
 	box-shadow:  20px 20px 60px #bebebe,
 	-20px -20px 60px #ffffff;
 }
@@ -113,6 +140,11 @@ img {
 	width: 94vw;
 	min-height: auto;
 	left: 50%;
+
+	-webkit-transform: translateX(-50%);
+	-ms-transform: translateX(-50%);
+	-moz-transform: translateX(-50%);
+	-o-transform: translateX(-50%);
 	transform: translateX(-50%);
 }
 
@@ -122,18 +154,30 @@ img {
 	z-index: 99;
 	background: rgba(255, 255, 255, 0.8);
 	border-radius: 16px;
+
+	-webkit-box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
 	box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+
   overflow: hidden;
 	width: max-content;
 	left: 50vw;
+
+	-webkit-transform: translateX(-50%);
+	-ms-transform: translateX(-50%);
+	-moz-transform: translateX(-50%);
+	-o-transform: translateX(-50%);
 	transform: translateX(-50%);
+
+	-o-transition: top .5s cubic-bezier(.86,0,.07,1);
+	-webkit-transition: top .5s cubic-bezier(.86,0,.07,1);
   transition: top .5s cubic-bezier(.86,0,.07,1);
 }
 
 /* backdrop-filter support */
 @supports ((-webkit-backdrop-filter: none) or (backdrop-filter: none)) {
   .navbar {
-    background-color: rgba(255, 255, 255, .2);
+    background: rgba(255, 255, 255, .2);
+
     -webkit-backdrop-filter: blur(5px);
     backdrop-filter: blur(5px);
   }
