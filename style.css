@@ -13,12 +13,16 @@
 
 body {
 	background: var(--white);
-	font-family: "Onest", sans-serif;
+	font-family: "basic-sans", "Onest", sans-serif;
 	margin: 0;
 	color: black;
 	font-size: 3vw;
   font-weight: 300;
 	text-align: center;
+}
+
+h1, h2, h3 {
+	font-family: "Onest", sans-serif;
 }
 
 h1 {
