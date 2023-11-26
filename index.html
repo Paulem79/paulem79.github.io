@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>Paulem</title>
+        <title>Paulem79</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="description" content="Paulem">
         <link rel="stylesheet" href="style.css" media="screen">
@@ -18,31 +18,10 @@
             <a target="_blank" class="navbar-item" href="https://www.twitch.tv/paulem79" title="Encore pire qu'Insta">Twitch</a>
             <span class="navbar-item icon" onclick="navbarExpand()"><i class="fa-solid fa-bars"></i></span>
         </nav>
-    
-        <script>
-            function navbarExpand() {
-                var x = document.getElementById("navbar");
-                if (x.className === "navbar")
-                    x.className += " responsive";
-                else
-                    x.className = "navbar";
-            }
-
-            let prevScrollpos = window.pageYOffset;
-            window.onscroll = function() {
-                let currentScrollPos = window.pageYOffset;
-                if (prevScrollpos > currentScrollPos) {
-                    document.getElementById("navbar").style.top = "1vh";
-                } else {
-                    document.getElementById("navbar").style.top = "-80px";
-                }
-                prevScrollpos = currentScrollPos;
-            }
-        </script>
         
         <div class="bio neumorphism">
             <div class="bio-content">
-                <h1 class="bp-gradient">Paulem</h1>
+                <h1 class="bp-gradient">Paulem79</h1>
                 <p>Freelance developer.</p>
             </div>
         </div>
@@ -69,15 +48,34 @@
             function sleep(ms) {
                 return new Promise(resolve => setTimeout(resolve, ms));
             }
+
+            function navbarExpand() {
+                var x = document.getElementById("navbar");
+                if (x.className === "navbar")
+                    x.className += " responsive";
+                else
+                    x.className = "navbar";
+            }
+
+            let prevScrollpos = window.pageYOffset;
+            window.onscroll = function() {
+                let currentScrollPos = window.pageYOffset;
+                if (prevScrollpos > currentScrollPos) {
+                    document.getElementById("navbar").style.top = "1vh";
+                } else {
+                    document.getElementById("navbar").style.top = "-80px";
+                }
+                prevScrollpos = currentScrollPos;
+            }
             
             document.addEventListener("load", Write());
 
             async function Write(){
                 const title = document.querySelector("h1");
                 while(true){
-                    title.innerHTML = "Paulem<span>.</span>";
+                    title.innerHTML = "Paulem79<span>.</span>";
                     await sleep(800);
-                    title.innerHTML = "Paulem<span style=\"visibility: hidden;\">.</span>";
+                    title.innerHTML = "Paulem79<span style=\"visibility: hidden;\">.</span>";
                     await sleep(800);
                 }
             }
