@@ -5,23 +5,27 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="description" content="Paulem">
         <link rel="stylesheet" href="style.css" media="screen">
-        <link rel="stylesheet" href="fontawesome.css" media="screen">
+        <link rel="stylesheet" href="social.css" media="screen">
         <link rel="stylesheet" href="https://use.typekit.net/tmf1rzv.css" media="screen">
     </head>
     <body>
-        <!-- Navigation Bar -->
-        <nav class="navbar" id="navbar">
-            <span class="navbar-item navbar-first">Navigation</span>
-            <a target="_blank"  class="navbar-item" href="https://www.youtube.com/channel/UC_6kI0gHuyWZxrJ0fBj_kiQ" title="Tu verras c'est cool"><i></i> YouTube</a>
-            <a target="_blank" class="navbar-item" href="https://twitter.com/PLem79" title="Ou X pour les intimes">Twitter</a>
-            <a target="_blank" class="navbar-item" href="https://www.instagram.com/paulemyt" title="Je poste que dalle">Instagram</a>
-            <a target="_blank" class="navbar-item" href="https://www.twitch.tv/paulem79" title="Encore pire qu'Insta">Twitch</a>
-            <span class="navbar-item icon" onclick="navbarExpand()"><i class="fa-solid fa-bars"></i></span>
-        </nav>
-        
-        <div class="bio neumorphism">
+        <div class="content bio neumorphism">
             <div class="bio-content">
-                <h1 class="bp-gradient">Paulem79</h1>
+                <h1 class="bp-gradient">Paulem79</h1>         
+                <div class="social-btns">
+                    <a class="btn youtube" href="https://www.youtube.com/channel/UC_6kI0gHuyWZxrJ0fBj_kiQ" target="_blank">
+                        <i class="fa fa-brands fa-youtube"></i>
+                    </a>
+                    <a class="btn twitter" href="https://twitter.com/PLem79" target="_blank">
+                        <i class="fa fa-brands fa-twitter"></i>
+                    </a>
+                    <a class="btn instagram" href="https://www.instagram.com/paulemyt" target="_blank">
+                        <i class="fa fa-brands fa-instagram"></i>
+                    </a>
+                    <a class="btn twitch" href="https://www.twitch.tv/paulem79" target="_blank">
+                        <i class="fa fa-brands fa-twitch"></i>
+                    </a>
+                </div>
                 <p>Freelance developer.</p>
             </div>
         </div>
@@ -44,28 +48,11 @@
             <img id="launcher" src="launcher.webp" alt="The launcher main page">
         </div>
 
+        <footer>Social buttons based on <a class="bp-gradient" href="https://codepen.io/chrisdothtml/pen/azPYqq/">Chris Deacy's codepen</a></footer>
+
         <script>
             function sleep(ms) {
                 return new Promise(resolve => setTimeout(resolve, ms));
-            }
-
-            function navbarExpand() {
-                var x = document.getElementById("navbar");
-                if (x.className === "navbar")
-                    x.className += " responsive";
-                else
-                    x.className = "navbar";
-            }
-
-            let prevScrollpos = window.pageYOffset;
-            window.onscroll = function() {
-                let currentScrollPos = window.pageYOffset;
-                if (prevScrollpos > currentScrollPos) {
-                    document.getElementById("navbar").style.top = "1vh";
-                } else {
-                    document.getElementById("navbar").style.top = "-80px";
-                }
-                prevScrollpos = currentScrollPos;
             }
             
             document.addEventListener("load", Write());
@@ -80,5 +67,6 @@
                 }
             }
         </script>
+        <script src="https://kit.fontawesome.com/32e2bd5693.js" crossorigin="anonymous"></script>
     </body>
 </html>
