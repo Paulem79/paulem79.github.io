@@ -151,6 +151,93 @@ footer {
 	font-size: 1.5vw;
 }
 
+.social-btns .btn,
+.social-btns .btn:before,
+.social-btns .btn .fa {
+    transition: all 0.35s;
+    transition-timing-function: cubic-bezier(0.31, -0.105, 0.43, 1.59);
+}
+
+.social-btns .btn:before {
+  top: 90%;
+  left: -110%;
+}
+
+.social-btns .btn .fa {
+  transform: scale(0.8);
+}
+
+.social-btns .btn.youtube:before {
+  background-color: #FF0000;
+}
+.social-btns .btn.youtube .fa {
+  color: #FF0000;
+}
+
+.social-btns .btn.twitter:before {
+  background-color: #3cf;
+}
+.social-btns .btn.twitter .fa {
+  color: #3cf;
+}
+
+.social-btns .btn.twitch:before {
+  background-color: #6441a5 ;
+}
+.social-btns .btn.twitch .fa {
+  color: #6441a5;
+}
+
+.social-btns .btn.instagram:before {
+    background-color: #d6249f;
+}
+.social-btns .btn.instagram .fa {
+    color: #d6249f;
+}
+
+.social-btns .btn:focus:before,
+.social-btns .btn:hover:before {
+  top: -10%;
+  left: -10%;
+}
+
+.social-btns .btn:focus .fa,
+.social-btns .btn:hover .fa {
+  color: #fff;
+  transform: scale(1);
+}
+
+.social-btns {
+  height: 14vh;
+}
+
+.social-btns .btn {
+  display: inline-block;
+  background-color: var(--slightly-whiter);
+  width: 14vh;
+  height: 14vh;
+  margin: 0 2vw;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  border-radius: 28%;
+  box-shadow: 0 5px 15px -5px rgba(0,0,0,0.1);
+  opacity: 0.99;
+}
+
+.social-btns .btn:before {
+  content: '';
+  width: 120%;
+  height: 120%;
+  position: absolute;
+  transform: rotate(45deg);
+}
+
+.social-btns .btn .fa {
+    margin-top: 1.55vh;
+    font-size: 11vh;
+}
+
 @media screen and (min-width: 601px) {
 	h1 {
 		margin-top: 15vh;
@@ -177,6 +264,17 @@ footer {
 	footer {
 		font-size: 4vw;
 	}
+	
+	.social-btns .btn {
+        width: 18vw;
+        height: 18vw;
+        margin: 0 .2vw;
+    }
+
+    .social-btns .btn .fa {
+        margin-top: 1vh;
+        font-size: 15vw;
+    }
 }
 
 /* ===== Scrollbar CSS ===== */
