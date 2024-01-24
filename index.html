@@ -1,24 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>Paulem79</title>
+        <title>Paulem79 - Freelance developer</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="description" content="Paulem79">
-        <meta content="Paulem79" property="og:title" />
-        <meta content="Paulem79's website" property="og:description" />
+        <meta name="description" content="I'm a freelance developer. I program in Java, Typescript, Javascript, HTML/CSS and much more!">
+        <meta content="Paulem79 - Freelance developer" property="og:title" />
+        <meta content="I'm a freelance developer. I program in Java, Typescript, Javascript, HTML/CSS and much more!" property="og:description" />
         <meta content="https://paulem79.github.io" property="og:url" />
         <meta content="https://yt3.ggpht.com/J4FVIZC9iKl4W_LmNX8eiXpEx1cYmzyMRq0_7bicCulgw9ag3ngdNOp9Ok7f9swpF5Xs9bEaBQ=s600-c-k-c0x00ffffff-no-rj-rp-mo" property="og:image" />
         <meta content="#f347b1" data-react-helmet="true" name="theme-color" />
+        <link rel="icon" type="image/x-icon" href="/favicon.ico">
         
         <link rel="preload" href="fonts.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
         <noscript><link rel="stylesheet" href="fonts.css"></noscript>
 
         <link rel="stylesheet" href="style.css" media="screen">
+        <link rel="stylesheet" href="fontawesome/fontawesome.css" media="screen">
     </head>
-    <body>
+    <body style="visibility: hidden;">
         <div class="content bio neumorphism">
-            <div class="bio-content">
-                <h1 class="bp-gradient">Paulem79</h1>         
+            <div class="bio-content" itemscope itemtype="https://schema.org/AboutPage">
+                <h1 itemprop="author" class="bp-gradient">Paulem79</h1>         
                 <div class="social-btns">
                     <a class="btn youtube" href="https://www.youtube.com/channel/UC_6kI0gHuyWZxrJ0fBj_kiQ" aria-label="YouTube" target="_blank">
                         <i class="fa fa-brands fa-youtube"></i>
@@ -33,30 +35,30 @@
                         <i class="fa fa-brands fa-twitch"></i>
                     </a>
                 </div>
-                <p>Freelance developer.</p>
+                <p>I'm a freelance developer.<br>And I do my programs in<br>Java, TS, and much more!</p>
             </div>
         </div>
 
         <div class="content neumorphism">
             <h2 class="bp-gradient"><a target="_blank" href="https://modrinth.com/mod/things-paulem">Things</a></h2>
             <p>Add things to Minecraft.</p>
-            <img id="things" src="things.webp" alt="Screenshot of Things">
+            <img id="things" src="things.webp" alt="Screenshot of Things by Paulem79">
         </div>
         
         <div class="content neumorphism">
             <h2 class="bp-gradient"><a target="_blank" href="https://github.com/Paulem79/ALOT" style="font-weight: 500;">ALOT</a></h2>
             <p>A lot of things, in a Spigot plugin.</p>
-            <img id="collector" src="collector.webp" alt="The water collector from ALOT"></img>
+            <img id="collector" src="collector.webp" alt="The water collector by Paulem79 from ALOT"></img>
         </div>
         
         <div class="content neumorphism">
             <h2 class="bp-gradient"><a target="_blank" href="https://github.com/Paulem79/Launcher">Launcher</a></h2>
             <p>A Minecraft Launcher</p>
-            <img id="launcher" src="launcher.webp" alt="The launcher main page">
+            <img id="launcher" src="launcher.webp" alt="Main page of Paulem79 launcher">
         </div>
 
-        <footer>Social buttons based on <a class="bp-gradient" href="https://codepen.io/chrisdothtml/pen/azPYqq/">Chris Deacy's codepen</a></footer>
-        <footer>© 2024 Paulem79. All rights reserved.</footer>
+        <footer itemprop="creditText">Social buttons based on <a class="bp-gradient" href="https://codepen.io/chrisdothtml/pen/azPYqq/">Chris Deacy's codepen</a></footer>
+        <footer>© <span itemprop="copyrightYear">2024</span> Paulem79. All rights reserved.</footer>
 
         <script>
             function sleep(ms) {
@@ -75,6 +77,11 @@
                 }
             }
         </script>
-        <script src="https://kit.fontawesome.com/32e2bd5693.js" crossorigin="anonymous" async></script>
+        <script>
+            window.addEventListener('load', function () {
+                document.querySelector("body").style.visibility = "visible";
+            });
+        </script>
+        <!--<script src="https://kit.fontawesome.com/32e2bd5693.js" crossorigin="anonymous" async></script>-->
     </body>
 </html>

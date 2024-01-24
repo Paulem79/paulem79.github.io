@@ -12,13 +12,25 @@
   --bg-size: 400%;
 }
 
+.content.neumorphism img:hover {
+	transform: scale(1.05) rotate(1deg);
+}
+
+.content.neumorphism img {
+	transition: transform .3s;
+}
+
+.content.bio .bio-content p {
+	font-size: 2.5vw;
+}
+
 body {
 	background: var(--white);
 	font-family: "basic-sans", "Onest", sans-serif;
 	margin: 0;
 	color: black;
 	font-size: 3vw;
-  font-weight: 300;
+  	font-weight: 300;
 	text-align: center;
 }
 
