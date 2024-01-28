@@ -21,7 +21,7 @@
 }
 
 .content.bio .bio-content p {
-	font-size: 2.5vw;
+	font-size: 3vw;
 }
 
 body {
@@ -57,7 +57,7 @@ h2 {
 	transition: color 1s ease, background-position 1s ease;
 }
 
-.bp-gradient:hover, .bp-gradient a:hover {
+.bp-gradient:hover, .bp-gradient a:hover, .bp-gradient:focus, .bp-gradient a:focus {
 	color: var(--color-two);
 }
 
@@ -80,7 +80,7 @@ h2 {
 		color: transparent !important;
 	}
 	
-	.bp-gradient:hover, .bp-gradient a:hover {
+	.bp-gradient:hover, .bp-gradient a:hover, .bp-gradient:focus, .bp-gradient a:focus {
 		color: transparent !important;
 		background-position: 300% 0;
 	}
@@ -287,6 +287,14 @@ footer {
         margin-top: 1vh;
         font-size: 15vw;
     }
+
+	.content.bio .bio-content p {
+		font-size: 6vw;
+	}
+}
+
+*:focus {
+    outline: none;
 }
 
 /* ===== Scrollbar CSS ===== */
