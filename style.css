@@ -12,11 +12,11 @@
   --bg-size: 400%;
 }
 
-.content.neumorphism img:hover {
+.content.neumorphism img:hover, .content.neumorphism video:hover {
 	transform: scale(1.05) rotate(1deg);
 }
 
-.content.neumorphism img {
+.content.neumorphism img, .content.neumorphism video {
 	transition: transform .3s;
 }
 
@@ -111,7 +111,7 @@ a:hover {
 	aspect-ratio: auto 683 / 384;
 }
 
-img {
+img, video {
 	max-width: calc(100% - calc(var(--img-margin) * 2));
 	max-height: 50vh;
 	border-radius: 2.5px;
