@@ -12,16 +12,21 @@
   --bg-size: 400%;
 }
 
-.content.neumorphism img:hover, .content.neumorphism video:hover {
+.content.neumorphism > img:hover, .content.neumorphism > video:hover {
 	transform: scale(1.05) rotate(1deg);
 }
 
-.content.neumorphism img, .content.neumorphism video {
+.content.neumorphism > img, .content.neumorphism > video {
 	transition: transform .3s;
 }
 
 .content.bio .bio-content p {
 	font-size: 3vw;
+}
+
+p > img {
+	width: 3vw;
+	margin: 0;
 }
 
 body {
@@ -99,22 +104,14 @@ a:hover {
 	color: var(--color-one) !important;
 }
 
-#things {
-	aspect-ratio: auto 683 / 353;
-}
-
-#collector {
-	aspect-ratio: auto 624 / 796;
-}
-
 #launcher {
-	aspect-ratio: auto 683 / 384;
+	aspect-ratio: auto 950 / 535;
 }
 
 img, video {
 	max-width: calc(100% - calc(var(--img-margin) * 2));
 	max-height: 50vh;
-	border-radius: 2.5px;
+	border-radius: 5px;
 	margin: 0 var(--img-margin);
 	margin-bottom: var(--img-margin);
 }
