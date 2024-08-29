@@ -117,7 +117,9 @@ p {
     background-color: transparent;
     z-index: -1;
     position: relative;
-    opacity: 0.4;
+    opacity: 0;
+
+    transition: opacity 0.25s;
 }
 
 .big-index {
@@ -125,28 +127,41 @@ p {
 }
 
 .jojo-1 {
-    background: rgb(255,0,0);
-    background: linear-gradient(45deg, rgba(255,0,0,1) 0%, rgba(255,255,0,1) 100%);
+    background: rgb(181, 0, 0);
+    background: linear-gradient(45deg, rgb(181, 0, 0) 0%, orange 100%);
+    background: linear-gradient(
+        45deg in hsl shorter hue, rgb(181, 0, 0), orange
+    );
 }
 
 .jojo-2 {
     background: rgb(85,0,255);
     background: linear-gradient(45deg, rgba(85,0,255,1) 0%, rgba(63,251,160,1) 100%);
+    background: linear-gradient(45deg in hsl shorter hue, rgb(85,0,255), rgb(63,251,160));
 }
 
 .jojo-3 {
     background: rgb(168,133,72);
     background: linear-gradient(45deg, rgba(168,133,72,1) 0%, rgba(17,182,255,1) 100%);
+    background: linear-gradient(
+        45deg in hsl shorter hue, rgb(168,133,72), rgb(17,182,255)
+    );
 }
 
 .jojo-4 {
     background: rgb(85,24,72);
     background: linear-gradient(45deg, rgba(85,24,72) 0%, rgba(170,12,205) 100%);
+    background: linear-gradient(
+        45deg in hsl shorter hue, rgb(85,24,72), rgb(170,12,205)
+    );
 }
 
 .jojo-5 {
     background: rgb(78,133,72);
     background: linear-gradient(45deg, rgba(78,133,72) 0%, rgba(27,62,80,1) 100%);
+    background: linear-gradient(
+        45deg in hsl shorter hue, rgb(78,133,72), rgb(27,62,80)
+    );
 }
 
 @media screen and (max-width: 800px) {

@@ -1,5 +1,5 @@
 let starPlatinumActivated = false;
-const jojoButton = document.querySelector("trigger-jojo");
+let isActivating = false;
 
 const htmlElement = document.querySelector(".filter");
 
@@ -10,36 +10,48 @@ async function starPlatinum() {
         const activationSound = new Audio('sounds/activation.mp3');
         activationSound.play();
 
-        await sleep(3850);
+        isActivating = true;
+
+        await sleep(3945);
+
+        isActivating = false;
 
         starPlatinumActivated = true;
 
         registeredDrops.forEach(tween => {
-            tween.pause();
+          tween.pause();
         });
     } else {
         const desactivationSound = new Audio('sounds/desactivation.mp3');
         desactivationSound.play();
 
-        await sleep(1330);
+        isActivating = true;
+
+        await sleep(1365);
+
+        isActivating = false;
 
         starPlatinumActivated = false;
 
         registeredDrops.forEach(tween => {
-            tween.play();
+          tween.play();
         });
     }
 
     htmlElement.classList.forEach(className => {
-        if(className.startsWith("jojo")) htmlElement.classList.remove(className);
+      if(className.startsWith("jojo")) {
+        htmlElement.classList.remove(className);
+      }
     });
     
 
     if(starPlatinumActivated) {
-        htmlElement.classList.add("big-index");
-        htmlElement.classList.toggle("jojo-" + randomIntFromInterval(1, 5)); // html -> .jojo
+      htmlElement.style.opacity = 0.4;
+      htmlElement.classList.add("big-index");
+      htmlElement.classList.toggle("jojo-" + randomIntFromInterval(1, 5)); // html -> .jojo
     } else {
-        htmlElement.classList.remove("big-index");
+      htmlElement.style.opacity = 0;
+      htmlElement.classList.remove("big-index");
     }
 }
 
@@ -72,7 +84,7 @@ function createRaindrop() {
   const startY = offset;
   let duration = random(1.5, 4);
 
-  registeredDrops.push(gsap.fromTo(
+  let tween = gsap.fromTo(
     raindrop,
     { x: startX, y: startY, opacity: 1 },
     {
@@ -86,11 +98,25 @@ function createRaindrop() {
 
         const index = registeredDrops.indexOf(this);
         if (index > -1) {
-            registeredDrops.splice(index, 1);
+          registeredDrops.splice(index, 1);
         }
       }
     }
-  ));
+  );
+
+  registeredDrops.push(tween);
+
+  registeredDrops.forEach(tween => {
+    if(!starPlatinumActivated && isActivating) {
+      // Activating
+      tween.timeScale(0.4);
+  
+    } else {
+      // On re enable / Rest of time not activating
+      tween.timeScale(1);
+
+    }
+  })
 }
 
 // Periodically create raindrops & lightning
