@@ -7,12 +7,9 @@ const registeredDrops = [];
 
 async function starPlatinum() {
     if(!starPlatinumActivated){
-        const activationSound = new Audio('sounds/activation.mp3');
-        activationSound.play();
-
         isActivating = true;
 
-        await sleep(3945);
+        await playAudioAndWait(new Audio('sounds/activation.mp3'));
 
         isActivating = false;
 
@@ -22,12 +19,9 @@ async function starPlatinum() {
           tween.pause();
         });
     } else {
-        const desactivationSound = new Audio('sounds/desactivation.mp3');
-        desactivationSound.play();
-
         isActivating = true;
 
-        await sleep(1365);
+        await playAudioAndWait(new Audio('sounds/desactivation.mp3'));
 
         isActivating = false;
 
@@ -59,15 +53,24 @@ function sleep(ms) {
     return new Promise(resolve => setTimeout(resolve, ms));
 }
 
+function playAudioAndWait(audio){
+  return new Promise(res=>{
+    audio.play()
+    audio.onended = res
+  });
+}
+
 /* RAIN */
-const delayRain = 50;
+const slowTimeScale = 0.4;
+const baseDelayRain = 50;
+let delayRain = baseDelayRain;
 const offset = 10;
 
 const raindrops = document.querySelector(".raindrops");
 
 function randomIntFromInterval(min, max) { // min and max included 
     return Math.floor(Math.random() * (max - min + 1) + min);
-  }
+}
 
 // Function to create a random number within a given range
 function random(min, max) {
@@ -109,10 +112,12 @@ function createRaindrop() {
   registeredDrops.forEach(tween => {
     if(!starPlatinumActivated && isActivating) {
       // Activating
-      tween.timeScale(0.4);
+      delayRain = baseDelayRain/(1/slowTimeScale);
+      tween.timeScale(slowTimeScale);
   
     } else {
       // On re enable / Rest of time not activating
+      delayRain = baseDelayRain;
       tween.timeScale(1);
 
     }
@@ -121,5 +126,9 @@ function createRaindrop() {
 
 // Periodically create raindrops & lightning
 setInterval(() => {
-  if(!starPlatinumActivated) createRaindrop();
+  if(delayRain != 50) {
+    if(random(0, 1) <= slowTimeScale) {
+      if(!starPlatinumActivated) createRaindrop();
+    }
+  } else if(!starPlatinumActivated) createRaindrop();
 }, delayRain);
